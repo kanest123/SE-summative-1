@@ -46,6 +46,17 @@
             right: 800px;
         }
 
+        .form-group input[type="submit"] {
+            flex: 1;
+            height: 25px;
+            width: 100px;
+            padding: 4px;
+            position: absolute;
+            right: 800px;
+            color: rgb(255,255,255);
+            background-color: rgb(140,0,0)
+        }
+
         .top-right-image {
             position: absolute;
             top: 5px;
@@ -55,6 +66,22 @@
         }
      </style>
 
+    <script>
+        function calculate() {
+            event.preventDefault()
+            // Get input values
+            var num1 = parseInt(document.getElementById('age').value);
+            var num2 = parseInt(document.getElementById('height').value);
+            var num3 = parseInt(document.getElementById('weight').value);
+
+            // Perform calculation
+            var result = num1 + num2 + num3;
+
+
+            // Display the result
+            document.getElementById('result').innerHTML = 'Predicted Implant size is: ' + result + '+/- 2 sizes';
+            }
+    </script>
 
 </head>
 <body >
@@ -84,11 +111,15 @@
             <label for="weight">Patient Weight: </label>
             <input type="text" id="weight" name="weight">
         </div>
+        
+        <div class="form-group">
+            <input type="submit" value="Submit" onclick="calculate()">
+        </div>
 
-        <input type="submit" value="Submit">
     </form>
 
-    <p> Predicted Implant size is ... +/- 2 sizes</p>
+    <p id="result"></p>
+
 
 
 </body>
