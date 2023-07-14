@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "jest": "^29.6.1",
+    "jsdom": "^22.1.0",
+    "setupFiles": "./jest.setup.js"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+
+}

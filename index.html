@@ -18,6 +18,15 @@
             color: rgb(255,255,255)
         }
 
+        q{
+            font-family: Kameron;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: rgb(140,0,0)
+        }
+
         .form-group {
             display: block;
             align-items: center;
@@ -37,7 +46,16 @@
             color: rgb(255,255,255)
         }
 
-        .form-group input[type="text"] {
+        .form-group select {
+            flex: 1;
+            height: 35px;
+            width: 211px;
+            padding: 4px;
+            right: 800px;
+            position: absolute;
+        }
+
+        .form-group input[type="number"] {
             flex: 1;
             height: 28px;
             width: 200px;
@@ -52,6 +70,7 @@
             width: 100px;
             padding: 4px;
             position: absolute;
+            top:300px;
             right: 800px;
             color: rgb(255,255,255);
             background-color: rgb(140,0,0)
@@ -66,59 +85,76 @@
         }
      </style>
 
+<!--
     <script>
+
         function calculate() {
             event.preventDefault()
             // Get input values
-            var num1 = parseInt(document.getElementById('age').value);
-            var num2 = parseInt(document.getElementById('height').value);
-            var num3 = parseInt(document.getElementById('weight').value);
+            var num1 = parseInt(document.getElementById('age'));
+            var num2 = parseInt(document.getElementById('height'));
+            var num3 = parseInt(document.getElementById('weight'));
+            var num4 = parseInt(document.getElementById('sex'));
 
             // Perform calculation
-            var result = num1 + num2 + num3;
+            var result = Math.round(((num1 + num2)/num3) * num4);
 
 
             // Display the result
-            document.getElementById('result').innerHTML = 'Predicted Implant size is: ' + result + '+/- 2 sizes';
-            }
+            document.getElementById('result').innerHTML = 'Predicted Implant size is: ' + result + ' +/- 2 sizes';
+        }
+
+    </script>
+    -->
+
+    <script src="index.js"></script>
+
+    <script>
+        const form = document.getElementById('myForm');
+        form.addEventListener('submitButton', function(event) {
+        event.preventDefault(); // Prevent form submission from refreshing the page
+        });
     </script>
 
 </head>
 <body >
 
-
     <img src="Logo.png" alt="Image Description" class="top-right-image">
     
     <p> Please enter the patient’s demographics in the entry boxes below, and press submit to return the estimated implant size</p>
 
-    <form>    
+    <div id="error"></div>
+    <form id="myform">
+            
         <div class="form-group">
-            <label for="name">Patient Name:</label>
-            <input type="text" id="name" name="name">
+            <label for="age">Patient Age: </label>
+            <input type="number" id="age" name="age" required>
         </div>
         
         <div class="form-group">
-            <label for="age">Patient Age: </label>
-            <input type="text" id="age" name="age">
-        </div>
-
-        <div class="form-group">
             <label for="height">Patient Height:</label>
-            <input type="text" id="height" name="height">
+            <input type="number" id="height" name="height" required>
         </div>
         
         <div class="form-group">
             <label for="weight">Patient Weight: </label>
-            <input type="text" id="weight" name="weight">
+            <input type="number" id="weight" name="weight" required>
+        </div>
+
+        <div class="form-group">          
+            <label for="myDropdown">Patient Sex:</label>
+            <select id="sex">
+                <option value="3">Male</option>
+                <option value="2">Female</option>
         </div>
         
         <div class="form-group">
-            <input type="submit" value="Submit" onclick="calculate()">
+            <input type="submit" id="submitButton" value="Submit" onclick=calculate() >
         </div>
 
     </form>
 
-    <p id="result"></p>
+    <q id="result"></q>
 
 
 
