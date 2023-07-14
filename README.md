@@ -7,6 +7,8 @@ For this project I will develop a simple JavaScript app that could be used withi
 ## Describe approach to prototype design
 When prototyping this design Figma was used to draft a simple, single page form that can be used to enter patient information and perform the necessary calculations to return the estimated implant size. The prototype styling was designed to align to company branding and was shared with multiple end users to collect initial feedback. Alterations were then made to the design ahead of development.  
 
+![image](https://github.com/kanest123/SE-summative-1/assets/138789122/1d014c72-7199-4571-b09f-ae1bf94421ce)
+
 
 ## Project planning technique:
 --addition of tickets/issues, to define product requirements
