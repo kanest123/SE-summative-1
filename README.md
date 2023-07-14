@@ -11,7 +11,6 @@ When prototyping this design Figma was used to draft a simple, single page form 
 
 
 ## Project planning technique:
---addition of tickets/issues, to define product requirements
 Throughout the design process an agile approach to development was taken. To align with course deadlines, 3 one-week sprints were planned. Week 1 focused on prototype design, set up of repository and preparation of initial backlog issues. During this sprint the project set up was completed, producing the initial prototype and adding a starting set of stories/issues to the development backlog.
 
 During the second sprint the bulk of the development work was done, replicating the prototype design in the codebase and adding the logic required to perform the implant size calculation. Finally, the third sprint included the addition of testing for the application, adequate time was also left in this sprint to allow for the correction of issues raised during testing.
@@ -19,6 +18,9 @@ During the second sprint the bulk of the development work was done, replicating 
 To manage the project the GitHub projects tool was used. This was chosen due to it's lightweight nature and close integration with the rest of the GitHub platform. This tool enables the linking of defined Issues to development tickets that can be used in project views including Kanban boards and roadmaps. In this project I used the roadmap feature to initially plan out the high level approach and timelines for development.
 
 A kanban board was then used to track development work throughout the development. Throughout the project new issues would be raised at any time and added to the "backlog" queue of the kanban board once accepted. At the start of each sprint the previous sprint's work was evaluated and any priority issues from the backlog were added to the "To Do" queue of the kanban board, these issues would then be implmented during the upcoming sprint and moved to "In Progress" and then "Done" once implemented. 
+
+![image](https://github.com/kanest123/SE-summative-1/assets/138789122/fad5dfc9-072f-4a41-9246-33f3e2dc9891)
+
 
 Overall I found this approach to project management highly effective, allowing for flexibility in the features required for development and for new requirements to be defined throughout the project. The use of GitHub projects also enabled careful tracking of development tasks and progress toward sprint objectives, ensuring an organised delivery methodology. Overall, this approach allowed for development to quickly get underway without requiring extensive planning upfront.
 
